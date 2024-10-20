@@ -109,32 +109,24 @@ footer {
     text-decoration: none;
 }
 
+.center {
+    margin: 0 auto;
+}
+
+.homepage-action-button {
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+}
+
 /* Welcome Section */
 .welcome-image {
     border-radius: 30px;
     margin-top: 20px;
     background-image: url('../images/welcome_image.png');
+    background-position: center;
     min-height: 50vh;
     background-size: cover;
-}
-
-.button-container {
-    margin-top: 30px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.button-container a:not(:last-child) {
-    margin-right: 20px;
-}
-
-.button-container button {
-    width: 100%;
-    padding: 10px;
-    max-width: 600px;
-    border-radius: 23px;
-    cursor: pointer;
-    font-size: 25px;
 }
 
 .view-results, .start-match {
@@ -155,12 +147,81 @@ footer {
 
 .btn {
     border: none;
+    width: 100%;
+}
+
+/* Additional Styles for Dropdown Navigation */
+.nav-toggle {
+    display: none;
+}
+
+/* New Match */
+
+.new-match-image {
+    border-radius: 30px;
+    margin: 20px 0;
+    background-image: url('../images/racket.png');
+    height: 503px;
+    background-size: cover;
+    background-position: center;
+}
+
+.form-container {
+    padding-top: 20px;
+    width: 40%;
+}
+
+.label-player {
+    display: block;
+}
+
+.input-player {
+    width: 100%;
+    padding: 12px 10px;
+    border: 1px solid #ccc;
+    border-radius: 18px;
+}
+
+.input-player::-webkit-input-placeholder {
+    color: #42a7f5;
+}
+
+.label-player {
+    margin: 20px 0 3px;
+}
+
+.form-button {
+    width: 100%;
+    display: block;
+    margin-top: 30px;
+    padding: 10px 0;
+    border-radius: 18px;
+    border: none;
+    background-color: #42a7f5;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.btn-filter {
+    width: 280px;
+    line-height: 45px;
+    margin-left: 20px;
+    border-radius: 18px;
+    border: none;
+    background-color: #42a7f5;
+    color: #fff;
+    cursor: pointer;
 }
 
 /* Responsive Styles */
 @media (max-width: 992px) {
     .container {
         width: 90%;
+    }
+
+    .form-container {
+        width: 50%;
     }
 
     .nav-link {
@@ -191,6 +252,10 @@ footer {
         padding-top: 20px;
     }
 
+    .form-container {
+        width: 80%;
+    }
+
     .nav-header {
         flex-direction: column;
         align-items: flex-start;
@@ -205,16 +270,6 @@ footer {
         display: flex;
     }
 
-    .button-container {
-        /*flex-direction: column;*/
-        align-items: center;
-    }
-
-    .button-container button {
-        width: 80%;
-        margin-bottom: 15px;
-    }
-
     .nav-toggle {
         display: block;
         cursor: pointer;
@@ -224,6 +279,10 @@ footer {
 }
 
 @media (max-width: 576px) {
+    .form-container {
+        width: 100%;
+    }
+
     .nav-link {
         font-size: 16px;
     }
@@ -234,10 +293,6 @@ footer {
 
     p {
         font-size: 16px;
-    }
-
-    .button-container button {
-        font-size: 18px;
     }
 
     .nav-header {
@@ -252,11 +307,6 @@ footer {
         flex-direction: column;
         text-align: center;
     }
-}
-
-/* Additional Styles for Dropdown Navigation */
-.nav-toggle {
-    display: none;
 }
 
 @media (max-width: 768px) {
