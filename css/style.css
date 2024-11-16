@@ -69,6 +69,8 @@ header {
     padding: 10px 35px;
     border-bottom: 2px solid #ccc;
     align-items: center;
+    position: relative;
+    background: #fff;
 }
 
 footer {
@@ -333,6 +335,9 @@ footer {
         width: 100%;
         margin: 0;
         padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
     }
 
     .form-container {
@@ -346,11 +351,16 @@ footer {
 
     .nav-links {
         flex-direction: column;
+        align-items: flex-start;
         display: none;
     }
 
     .nav-links.active {
         display: flex;
+    }
+
+    .nav-link + .nav-link {
+        margin-left: 0;
     }
 
     .nav-toggle {
@@ -383,6 +393,7 @@ footer {
         background-color: white;
         width: 100%;
         padding: 10px 15px;
+        box-sizing: border-box;
     }
 
     footer {
